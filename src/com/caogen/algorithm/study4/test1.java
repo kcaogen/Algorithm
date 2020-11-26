@@ -26,13 +26,11 @@ public class test1 {
 
         NodeUtil.printnewHead(head);
 
-        System.out.println();
         //新增一个节点
         Node newNode = new Node(33, node5.getNext());
         node5.setNext(newNode);
         NodeUtil.printnewHead(head);
 
-        System.out.println();
         //删除一个节点
         node5.setNext(newNode.getNext());
         NodeUtil.printnewHead(head);
