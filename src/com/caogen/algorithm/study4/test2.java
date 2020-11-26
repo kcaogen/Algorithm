@@ -19,16 +19,12 @@ public class test2 {
         Node head = new Node(1, node2);
 
         NodeUtil.printnewHead(head);
-        System.out.println();
 
         Node reverse = reverse(head);
         NodeUtil.printnewHead(reverse);
-        System.out.println();
 
         Node reverse2 = reverse(reverse);
         NodeUtil.printnewHead(reverse2);
-        System.out.println();
-
     }
 
     public static Node reverse(Node head) {
