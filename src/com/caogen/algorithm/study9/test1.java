@@ -2,6 +2,8 @@ package com.caogen.algorithm.study9;
 
 import com.caogen.algorithm.common.TreeNode;
 
+import java.util.LinkedList;
+
 /**
  * @Author 康良玉
  * @Description 描述
@@ -24,6 +26,8 @@ public class test1 {
         inOrderTraverse(nodeA);
         System.out.println();
         postOrderTraverse(nodeA);
+        System.out.println();
+        levelTraverse(nodeA);
     }
 
     // 先序遍历
@@ -54,6 +58,29 @@ public class test1 {
         postOrderTraverse(node.getLeft());
         postOrderTraverse(node.getRight());
         System.out.print(node.getValue() + " ");
+    }
+
+    //按照层次顺序遍历
+    public static void levelTraverse(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+
+        LinkedList<TreeNode> linkedList = new LinkedList<TreeNode>();
+        TreeNode temp;
+        linkedList.add(node);
+        while (!linkedList.isEmpty()) {
+            temp = linkedList.poll();
+            System.out.print(temp.getValue() + " ");
+
+            if (null != temp.getLeft()) {
+                linkedList.add(temp.getLeft());
+            }
+
+            if (null != temp.getRight()) {
+                linkedList.add(temp.getRight());
+            }
+        }
     }
 
 }
