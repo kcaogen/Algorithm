@@ -1,6 +1,6 @@
-package com.caogen.algorithm.study9;
+package com.caogen.algorithm.study.study9;
 
-import com.caogen.algorithm.common.TreeNode;
+import com.caogen.algorithm.study.common.TreeNode;
 
 import java.util.LinkedList;
 

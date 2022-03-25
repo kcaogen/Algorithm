@@ -1,4 +1,4 @@
-package com.caogen.algorithm.study12;
+package com.caogen.algorithm.study.study12;
 
 /**
  * @Author 康良玉

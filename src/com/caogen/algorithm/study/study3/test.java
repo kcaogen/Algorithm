@@ -1,4 +1,4 @@
-package com.caogen.algorithm.study3;
+package com.caogen.algorithm.study.study3;
 
 import java.util.Arrays;
 

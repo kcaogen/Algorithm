@@ -1,7 +1,7 @@
-package com.caogen.algorithm.study5;
+package com.caogen.algorithm.study.study5;
 
-import com.caogen.algorithm.common.Node;
-import com.caogen.algorithm.common.NodeUtil;
+import com.caogen.algorithm.study.common.Node;
+import com.caogen.algorithm.study.common.NodeUtil;
 
 import java.util.Stack;
 

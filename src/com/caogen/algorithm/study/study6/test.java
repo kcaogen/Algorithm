@@ -1,4 +1,4 @@
-package com.caogen.algorithm.study6;
+package com.caogen.algorithm.study.study6;
 
 import java.util.LinkedList;
 

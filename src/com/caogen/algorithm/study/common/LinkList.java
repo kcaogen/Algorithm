@@ -1,4 +1,4 @@
-package com.caogen.algorithm.common;
+package com.caogen.algorithm.study.common;
 
 /**
  * @Author 康良玉

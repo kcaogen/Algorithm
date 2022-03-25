@@ -1,4 +1,4 @@
-package com.caogen.algorithm.study10;
+package com.caogen.algorithm.study.study10;
 
 import java.util.HashMap;
 import java.util.Map;

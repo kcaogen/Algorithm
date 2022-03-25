@@ -1,4 +1,4 @@
-package com.caogen.algorithm.study8;
+package com.caogen.algorithm.study.study8;
 
 import java.util.Stack;
 

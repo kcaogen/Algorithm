@@ -1,7 +1,7 @@
-package com.caogen.algorithm.study4;
+package com.caogen.algorithm.study.study4;
 
-import com.caogen.algorithm.common.Node;
-import com.caogen.algorithm.common.NodeUtil;
+import com.caogen.algorithm.study.common.Node;
+import com.caogen.algorithm.study.common.NodeUtil;
 
 /**
  * @Author 康良玉
