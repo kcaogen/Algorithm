@@ -1,8 +1,11 @@
 package com.caogen.algorithm.imooc.linear_search;
 
+import com.caogen.algorithm.imooc.common.ArrayGenerator;
+
 /**
  * @Author 康良玉
- * @Description 线性查找法
+ * O(1) < O(㏒n) < O(√n) < O(n) < O(n㏒n) < O(n²) < O(2ⁿ) < O(n!)
+ * @Description 线性查找法 O(n)
  * @Create 2022-03-25 16:25
  */
 public class LinearSearch {
@@ -26,7 +29,10 @@ public class LinearSearch {
         return index;
     }
 
-    public static void main(String[] args) {
+    /**
+     * 算法测试
+     */
+    private static void algorithmTest() {
         Integer[] data = {24, 18, 12, 9, 16, 66, 32, 4};
 
         int target = 16;
@@ -44,6 +50,30 @@ public class LinearSearch {
         Student target3 = new Student(2, "caogen2");
         int result3 = LinearSearch.search(students, target3);
         System.out.println(result3);
+    }
+
+    /**
+     * 性能测试
+     */
+    private static void performanceTest() {
+        int[] dataSize = {1000000, 10000000};
+        for (int n : dataSize) {
+            Integer[] data = ArrayGenerator.generateOrderedArray(n);
+
+            long startTime = System.nanoTime();
+            for (int k = 0; k < 100; k++) {
+                LinearSearch.search(data, n);
+            }
+            long endTime = System.nanoTime();
+
+            double time = (endTime - startTime) / 1000000000.0;
+            System.out.println("n = " + n + ", 100 runs : " + time + " s");
+        }
+    }
+
+    public static void main(String[] args) {
+        algorithmTest();
+        performanceTest();
     }
 
 }
