@@ -1,7 +1,6 @@
 package com.caogen.algorithm.leetcode;
 
 import com.caogen.algorithm.imooc.common.ArrayGenerator;
-import com.caogen.algorithm.imooc.linear_search.LinearSearch;
 
 /**
  * @Author 康良玉
