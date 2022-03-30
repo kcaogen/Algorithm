@@ -1,5 +1,7 @@
 package com.caogen.algorithm.imooc.common;
 
+import com.caogen.algorithm.imooc.selection_sort.SelectionSort;
+
 /**
  * @Author 康良玉
  * @Description 描述
@@ -13,12 +15,26 @@ public class SortingHelper {
 
     public static <E extends Comparable<E>> boolean isSorted(E[] data) {
         for (int i = 1; i < data.length; i++) {
-            if (data[i-1].compareTo(data[i]) > 0) {
+            if (data[i - 1].compareTo(data[i]) > 0) {
                 return false;
             }
         }
 
         return true;
+    }
+
+    public static <E extends Comparable<E>> void sortTest(String sortName, E[] data) {
+        long startTime = System.nanoTime();
+        if (sortName.equals("SelectionSort")) {
+            SelectionSort.sort(data);
+        }
+        long endTime = System.nanoTime();
+
+        double time = (endTime - startTime) / 1000000000.0;
+        if (!SortingHelper.isSorted(data)) {
+            throw new RuntimeException(sortName + " failed");
+        }
+        System.out.println(String.format("%s n = %d : %f s", sortName, data.length, time));
     }
 
 }
