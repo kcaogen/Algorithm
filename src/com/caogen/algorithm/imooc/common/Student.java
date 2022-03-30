@@ -1,4 +1,4 @@
-package com.caogen.algorithm.imooc.linear_search;
+package com.caogen.algorithm.imooc.common;
 
 import java.util.Objects;
 

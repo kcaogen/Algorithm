@@ -1,6 +1,7 @@
 package com.caogen.algorithm.imooc.linear_search;
 
 import com.caogen.algorithm.imooc.common.ArrayGenerator;
+import com.caogen.algorithm.imooc.common.Student;
 
 /**
  * @Author 康良玉
