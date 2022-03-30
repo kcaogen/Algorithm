@@ -44,11 +44,11 @@ public class LinearSearch {
         int result2 = LinearSearch.search(data, target2);
         System.out.println(result2);
 
-        Student[] students = {new Student(1, "caogen1"),
-                new Student(2, "caogen2"),
-                new Student(3, "caogen3")};
+        Student[] students = {new Student(1, "caogen1", 60),
+                new Student(2, "caogen2", 88),
+                new Student(3, "caogen3", 99)};
 
-        Student target3 = new Student(2, "caogen2");
+        Student target3 = new Student(2, "caogen2", 88);
         int result3 = LinearSearch.search(students, target3);
         System.out.println(result3);
     }
