@@ -18,6 +18,12 @@ public class SelectionSort {
 
     }
 
+    /**
+     * 选择排序法
+     * data[0...i]已排序，data[i...n]未排序
+     * @param data
+     * @param <E>
+     */
     public static <E extends Comparable<E>> void sort(E[] data) {
         for (int i = 0; i < data.length; i++) {
             int minIndex = i;
@@ -32,6 +38,29 @@ public class SelectionSort {
             E e = data[i];
             data[i] = data[minIndex];
             data[minIndex] = e;
+        }
+    }
+
+    /**
+     * 选择排序法
+     * data[0...i]未排序，data[i...n]已排序
+     * @param data
+     * @param <E>
+     */
+    public static <E extends Comparable<E>> void sort2(E[] data) {
+        for (int i = data.length - 1; i >= 0; i--) {
+            int maxIndex = i;
+
+            // 选择data[0...i] 中的最大值索引
+            for (int j = i; j >= 0; j--) {
+                if (data[j].compareTo(data[maxIndex]) > 0) {
+                    maxIndex = j;
+                }
+            }
+
+            E e = data[i];
+            data[i] = data[maxIndex];
+            data[maxIndex] = e;
         }
     }
 
