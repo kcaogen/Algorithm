@@ -10,6 +10,7 @@ import java.util.Arrays;
  * @Author 康良玉
  * O(1) < O(㏒n) < O(√n) < O(n) < O(n㏒n) < O(n²) < O(2ⁿ) < O(n!)
  * @Description 选择排序法 O(n²)
+ * 无论是什么数组，选择排序的复杂度 O(n²)
  * @Create 2022-03-29 16:42
  */
 public class SelectionSort {
@@ -21,6 +22,7 @@ public class SelectionSort {
     /**
      * 选择排序法
      * data[0...i]已排序，data[i...n]未排序
+     *
      * @param data
      * @param <E>
      */
@@ -35,15 +37,14 @@ public class SelectionSort {
                 }
             }
 
-            E e = data[i];
-            data[i] = data[minIndex];
-            data[minIndex] = e;
+            SortingHelper.swap(data, i, minIndex);
         }
     }
 
     /**
      * 选择排序法
      * data[0...i]未排序，data[i...n]已排序
+     *
      * @param data
      * @param <E>
      */
@@ -58,9 +59,7 @@ public class SelectionSort {
                 }
             }
 
-            E e = data[i];
-            data[i] = data[maxIndex];
-            data[maxIndex] = e;
+            SortingHelper.swap(data, i, maxIndex);
         }
     }
 
