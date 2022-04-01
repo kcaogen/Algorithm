@@ -1,5 +1,6 @@
 package com.caogen.algorithm.imooc.common;
 
+import com.caogen.algorithm.imooc.insertion_sort.InsertionSort;
 import com.caogen.algorithm.imooc.selection_sort.SelectionSort;
 
 /**
@@ -11,6 +12,12 @@ public class SortingHelper {
 
     private SortingHelper() {
 
+    }
+
+    public static <E> void swap(E[] data, int i, int j) {
+        E e = data[i];
+        data[i] = data[j];
+        data[j] = e;
     }
 
     public static <E extends Comparable<E>> boolean isSorted(E[] data) {
@@ -25,9 +32,21 @@ public class SortingHelper {
 
     public static <E extends Comparable<E>> void sortTest(String sortName, E[] data) {
         long startTime = System.nanoTime();
-        if (sortName.equals("SelectionSort")) {
-            SelectionSort.sort(data);
+
+        switch (sortName) {
+            case "SelectionSort":
+                SelectionSort.sort(data);
+                break;
+            case "InsertionSort":
+                InsertionSort.sort(data);
+                break;
+            case "InsertionSortByBest":
+                InsertionSort.sortByBest(data);
+                break;
+            default:
+                break;
         }
+
         long endTime = System.nanoTime();
 
         double time = (endTime - startTime) / 1000000000.0;
