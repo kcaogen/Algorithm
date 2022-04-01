@@ -44,10 +44,12 @@ public class Search_704 {
             Integer[] data = ArrayGenerator.generateOrderedArray(n);
 
             long startTime = System.nanoTime();
-            search(data, 1);
+            for (int i = 0; i < 1000000; i++) {
+                search(data, 1);
+            }
             long endTime = System.nanoTime();
             double time = (endTime - startTime) / 1000000000.0;
-            System.out.println("n = " + n + ", search runs : " + time + " s");
+            System.out.println("n = " + n + ", search runs 1000000 : " + time + " s");
         }
     }
 
