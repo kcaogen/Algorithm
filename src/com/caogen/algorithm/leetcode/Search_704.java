@@ -10,6 +10,14 @@ import com.caogen.algorithm.imooc.common.ArrayGenerator;
  */
 public class Search_704 {
 
+    /**
+     * 时间复杂度：O(㏒n)
+     * 空间复杂度：O(1)
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
     public static int search(Integer[] nums, int target) {
         int low = 0, high = nums.length - 1;
         while (low <= high) {
@@ -30,7 +38,7 @@ public class Search_704 {
      * 算法测试
      */
     private static void algorithmTest() {
-        Integer[] nums = {-1,0,3,5,9,12};
+        Integer[] nums = {-1, 0, 3, 5, 9, 12};
         int result = search(nums, 9);
         System.out.println(result);
     }
