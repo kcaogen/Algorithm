@@ -15,7 +15,7 @@ public class IsValid_20 {
 
     /**
      * @param s 时间复杂度：O(n)
-     *          空间复杂度：O(1)
+     *          空间复杂度：O(n)
      * @return
      */
     public static boolean isValid(String s) {
