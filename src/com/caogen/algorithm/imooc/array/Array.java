@@ -22,7 +22,7 @@ public class Array<E> {
     }
 
     /**
-     * 五参数构造函数，默认数组容量为10
+     * 无参数构造函数，默认数组容量为10
      */
     public Array() {
         this(10);
