@@ -6,7 +6,7 @@ package com.caogen.algorithm.imooc.queue;
  * @Create 2022-04-12 15:15
  */
 public interface Queue<E> {
-
+    
     int getSize();
 
     boolean isEmpty();
