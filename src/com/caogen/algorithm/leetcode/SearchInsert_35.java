@@ -10,6 +10,14 @@ import com.caogen.algorithm.imooc.common.ArrayGenerator;
  */
 public class SearchInsert_35 {
 
+    /**
+     * 时间复杂度：O(㏒n)
+     * 空间复杂度：O(1)
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
     public static int searchInsert(Integer[] nums, int target) {
         int result = nums.length;
         int low = 0, high = nums.length - 1;
