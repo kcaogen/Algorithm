@@ -32,6 +32,7 @@ public class LengthOfLastWord_58 {
             if (flag == false && c == ' ') {
                 break;
             }
+
             length++;
         }
 
