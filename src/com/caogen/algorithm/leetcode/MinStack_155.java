@@ -1,6 +1,5 @@
 package com.caogen.algorithm.leetcode;
 
-
 import java.util.Stack;
 
 /**
@@ -41,6 +40,25 @@ public class MinStack_155 {
 
     public int getMin() {
         return minStack.peek();
+    }
+
+    /**
+     * 算法测试
+     */
+    private static void algorithmTest() {
+        MinStack_155 myStack = new MinStack_155();
+        myStack.push(1);
+        myStack.push(2);
+        myStack.push(3);
+        System.out.println(myStack.top()); // 返回 3
+        System.out.println(myStack.getMin()); // 返回 1
+        myStack.pop();
+        System.out.println(myStack.top()); // 返回 2
+        System.out.println(myStack.getMin()); // 返回 1
+    }
+
+    public static void main(String[] args) {
+        algorithmTest();
     }
 
 }
