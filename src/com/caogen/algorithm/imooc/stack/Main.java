@@ -8,15 +8,25 @@ package com.caogen.algorithm.imooc.stack;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayStack<Integer> stack = new ArrayStack<>();
+        ArrayStack<Integer> arrayStack = new ArrayStack<>();
 
         for (int i = 0; i < 5; i++) {
-            stack.push(i);
-            System.out.println(stack);
+            arrayStack.push(i);
+            System.out.println(arrayStack);
         }
 
-        stack.pop();
-        System.out.println(stack);
+        arrayStack.pop();
+        System.out.println(arrayStack);
+
+        LinkedStack<Integer> linkedStack = new LinkedStack<>();
+
+        for (int i = 0; i < 5; i++) {
+            linkedStack.push(i);
+            System.out.println(linkedStack);
+        }
+
+        linkedStack.pop();
+        System.out.println(linkedStack);
     }
 
 }
