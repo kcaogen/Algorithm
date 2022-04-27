@@ -4,7 +4,7 @@ import com.caogen.algorithm.imooc.array.Array;
 
 /**
  * @Author 康良玉
- * @Description 描述
+ * @Description 用数组实现栈
  * @Create 2022-04-08 15:45
  */
 public class ArrayStack<E> implements Stack<E> {
