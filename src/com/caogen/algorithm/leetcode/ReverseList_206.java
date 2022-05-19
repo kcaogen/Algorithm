@@ -38,7 +38,7 @@ public class ReverseList_206 {
      * @param head
      * @return
      */
-    public static ListNode reverseList1(ListNode head) {
+    public static ListNode reverseList(ListNode head) {
         if (head == null) {
             return null;
         }
@@ -64,12 +64,12 @@ public class ReverseList_206 {
      * @param head
      * @return
      */
-    public static ListNode reverseList2(ListNode head) {
+    public static ListNode reverseListByRecursion(ListNode head) {
         if (null == head || null == head.next) {
             return head;
         }
 
-        ListNode revNode = reverseList2(head.next);
+        ListNode revNode = reverseListByRecursion(head.next);
         head.next.next = head;
         head.next = null;
 
@@ -95,13 +95,12 @@ public class ReverseList_206 {
         listNode.next.next = new ListNode(3);
         System.out.println(toString(listNode));
 
-        listNode = reverseList1(listNode);
+        listNode = reverseList(listNode);
         System.out.println(toString(listNode));
     }
 
     public static void main(String[] args) {
         algorithmTest();
     }
-
 
 }
