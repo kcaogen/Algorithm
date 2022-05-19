@@ -1,0 +1,59 @@
+代码运行过程
+
+初始化值
+list1 = 1 -> 2 -> 4 -> null
+list2 = 1 -> 3 -> 4 -> null
+preHead = -1 -> null
+prev = -1 -> null
+
+第一次遍历
+prev.next = list1 = 1 -> 2 -> 4 -> null
+prev = -1 -> 1 -> 2 -> 4 -> null
+list1 = 2 -> 4 -> null
+list2 = 1 -> 3 -> 4 -> null
+preHead = -1 -> 1 -> 2 -> 4 -> null
+
+prev = 1 -> 2 -> 4 -> null
+
+第二次遍历
+prev.next = list2 = 1 -> 3 -> 4 -> null
+prev = 1 -> 1 -> 3 -> 4 -> null
+list1 = 2 -> 4 -> null
+list2 = 3 -> 4 -> null
+preHead = -1 -> 1 -> 1 -> 3 -> 4 -> null
+
+prev = 1 -> 3 -> 4 -> null
+
+第三次遍历
+prev.next = list1 = 2 -> 4 -> null
+prev = 1 -> 2 -> 4 -> null
+list1 = 4 -> null
+list2 = 3 -> 4 -> null
+preHead = -1 -> 1 -> 1 -> 2 -> 4 -> null
+
+prev = 2 -> 4 -> null
+
+第四次遍历
+prev.next = list2 = 3 -> 4 -> null
+prev = 2 -> 3 -> 4 -> null
+list1 = 4 -> null
+list2 = 4 -> null
+preHead = -1 -> 1 -> 1 -> 2 -> 3 -> 4 -> null
+
+prev = 3 -> 4 -> null
+
+第五次遍历
+prev.next = list1 = 4 -> null
+prev = 3 -> 4 -> null
+list1 = null
+list2 = 4 -> null
+preHead = -1 -> 1 -> 1 -> 2 -> 3 -> 4 -> null
+
+prev = 4 -> null
+
+最后合并
+prev.next = list2 = 4 -> null
+prev = 4 -> 4 -> null
+list1 = null
+list2 = null
+preHead = -1 -> 1 -> 1 -> 2 -> 3 -> 4 -> 4 -> null
